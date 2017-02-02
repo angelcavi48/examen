@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<!--link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css"-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			//alert("Jquery funcionando....");
+		    $("#btnSumar").click(function(){
+		    	 // alert("Evento funcionando");
+		    	 var n1 = parseInt($("#num1").val());
+		    	 var n2 = parseInt($("#num2").val());
+                 var suma = n1+n2;
+		    	 $("#resultado").val(suma);
+		    	 //alert("el resultado de la suma es: "+suma);
+		    	 
+		    });
+		    $("#btnResta").click(function(){
+		    	 // alert("Evento funcionando");
+		    	 var n1 = parseInt($("#num1").val());
+		    	 var n2 = parseInt($("#num2").val());
+                 var resta = n1-n2;
+		    	 $("#resultado").val(resta);
+		    	 //alert("el resultado de la suma es: "+suma);
+		    	 
+		    });
+            
+             $("#btnMultiplica").click(function(){
+		    	 // alert("Evento funcionando");
+		    	 var n1 = parseInt($("#num1").val());
+		    	 var n2 = parseInt($("#num2").val());
+                 var mul = n1*n2;
+		    	 $("#resultado").val(mul);
+		    	 //alert("el resultado de la suma es: "+suma);
+		    	 
+		    });
+
+             $("#btnDivicion").click(function(){
+		    	 // alert("Evento funcionando");
+		    	 var n1 = parseInt($("#num1").val());
+		    	 var n2 = parseInt($("#num2").val());
+                 var div = n1/n2;
+		    	 $("#resultado").val(div);
+		    	 //alert("el resultado de la suma es: "+suma);
+		    	 
+		    });
+            
+             $("#btnfactorial").click(function(){
+		    	  //alert("Evento funcionando");
+		   	    var n1 = parseInt($("#fac").val());
+		    	var fact = n1;
+                var fact0=1;  
+                  
+                  if (fact<0) {
+
+                  	alert("No hay factoriales con numeros negativos");
+                  	
+                       }
+
+                  if (fact==0) {
+
+                  //	alert("e: "+fact);
+                  	$("#resul").val(fact0);
+                       }
+                 
+                 if (fact>0){     
+                 for (var i = n1-1; i >= 1; i--) {
+                                fact = fact*i;
+                 
+                                   }                 
+		    	 $("#resul").val(fact);
+		    	 //(alert("el resultado de la suma es: "+fact);
+		    	 }
+		    });
+
+		});
+	</script>
+	<style type="text/css">
+		p{
+			text-align: center;
+		}
+	    /* div{
+	     	background-color: yellow; 
+	     }*/
+	    
+	     #Contacto{
+	        background-color: yellow;	
+	     }
+	     .colorAmarillo{
+	        color:red;
+	        font-size: 20px;	
+	     }
+
+	</style>
+</head>
+<body>
+	<div data-role="page" id="Principal" data-theme="a">
+		<div data-role="header">
+		    
+			<p>Examen primer periodo</p>
+			
+		</div>
+
+            <div data-role="content">
+            <a href="#operaciones" data-role="button" data-transition="slide">Operaciones básicas</a>
+			<a href="#factorial" data-role="button" data-transition="slideup">Obtener factorial</a>
+			<a href="#Datos" data-role="button" data-transition="slidedown">Datos Desarrolador</a>
+            </div>
+    </div>
+
+
+           <div data-role="page" id="operaciones"><!--tercera interfaz-->
+		<!--div data-role="header">
+			<p>Sumar dos numeros</p>			
+		</div-->	
+        
+               
+               <p>Operaciones Basicas</p>
+		       <div data-role="content">
+			   <input type="text" id="num1" placeholder="Escribe un número">
+			   <input type="text" id="num2" placeholder="Escribe un segundo número">
+			
+			    <input type="button" id="btnSumar" value="Sumar" >
+                <input type="button" id="btnResta" value="Restar" >
+                <input type="button" id="btnMultiplica" value="Multiplicar" >
+                <input type="button" id="btnDivicion" value="Dividir" >
+                <input type="text" id="resultado" placeholder="Resultado">
+		     <a href="#Principal" data-role="button" data-transition="turn">Regresar a principal</a>
+		</div>
+		<div data-role="footer">
+			<p>Creado por Angel Carcamo</p>
+		</div>
+	      </div>
+
+            <div data-role="page" id="factorial"><!--tercera interfaz-->
+	
+       
+               <p>Obtener Factorial</p>
+		       <div data-role="content">
+			   <input type="text" id="fac" placeholder="Escribe un número">	
+			    <input type="button" id="btnfactorial" value="Obtener factorial" >                
+                <input type="text" id="resul" placeholder="Resultado">
+		     <a href="#Principal" data-role="button" data-transition="turn">Regresar a principal</a>
+		</div>
+		<div data-role="footer">
+			<p>Creado por Angel Carcamo</p>
+		</div>
+	      </div>
+
+
+	     <div data-role="page" id="Datos"><!--Segunda interfaz-->
+		 <div data-role="header">
+			<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-top">Regresar</a>
+			<p>Base de datos para dispositivos moviles</p>			
+		</div>	
+		<div data-role="content">
+			Datos Estudiante:
+			<p>Nombre:      Angel Carcamo Viveros</p>
+			<p>No. Control. 12940080*</p>
+			<p>Telefono:    2331254675</p>
+			<p>Correo:      angelcavi48@gmail.com</p>
+		</div>
+		<div data-role="footer">
+			<p>Creado por Angel Carcamo</p>
+		</div>
+	</div>
+
+</body>
+</html>
